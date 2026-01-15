@@ -1,5 +1,34 @@
+import styles from "./Home.module.css";
+
+import ProductCard from "../../components/ProductCard";
+
+import useFetchProducts from "../../hooks/useFetchProducts";
+
 const Home = () => {
-  return <div></div>;
+  const { products, loading } = useFetchProducts();
+
+  return (
+    <div className={styles.home}>
+      <h1>Discover amazing fake store items from fake store API</h1>
+      <p>Your one-stop shop for electronics, jewelry, and fashion</p>
+      <button>Shop now</button>
+      <h2>Featured Products</h2>
+      {loading && <p>Loading...</p>}
+      <div className={styles.products_container}>
+        {products &&
+          products
+            .slice(0, 3)
+            .map((product) => (
+              <ProductCard
+                key={product.id}
+                title={product.title}
+                price={product.price}
+                image={product.image}
+              />
+            ))}
+      </div>
+    </div>
+  );
 };
 
 export default Home;

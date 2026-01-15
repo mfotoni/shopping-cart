@@ -1,0 +1,37 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 4rem;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 2.2rem;
+  margin: 2rem 0 1rem;
+}
+
+.home p {
+  margin-bottom: 1rem;
+}
+
+.home button {
+  /* display: flex; */
+  align-self: center;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  width: fit-content;
+  /* margin-bottom: 3rem; */
+}
+
+.home h2 {
+  /* margin: 3rem 0 2rem; */
+  font-size: 1.8rem;
+}
+
+.products_container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
