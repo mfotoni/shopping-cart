@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import ProductCard from "../../components/ProductCard";
 
 import useFetchProducts from "../../hooks/useFetchProducts";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const { products, loading } = useFetchProducts();
@@ -11,9 +12,11 @@ const Home = () => {
     <div className={styles.home}>
       <h1>Discover amazing fake store items from fake store API</h1>
       <p>Your one-stop shop for electronics, jewelry, and fashion</p>
-      <button>Shop now</button>
+      <NavLink to={"/shop"}>
+        <button>Shop now</button>
+      </NavLink>
       <h2>Featured Products</h2>
-      {loading && <p>Loading...</p>}
+      {loading && <p className="loading">Loading...</p>}
       <div className={styles.products_container}>
         {products &&
           products

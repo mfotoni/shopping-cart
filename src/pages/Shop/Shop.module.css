@@ -1,0 +1,30 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 8rem;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 2.2rem;
+  margin: 2rem 0 1rem;
+}
+
+.products_container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 840px) {
+  .shop {
+    padding: 0 4rem;
+  }
+
+  @media (max-width: 700px) {
+    .shop {
+      padding: 0;
+    }
+  }
+}
