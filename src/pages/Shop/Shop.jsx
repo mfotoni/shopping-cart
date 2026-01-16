@@ -4,7 +4,7 @@ import useFetchProducts from "../../hooks/useFetchProducts";
 
 import ProductCard from "../../components/ProductCard";
 
-const Shop = () => {
+const Shop = ({ addToCart }) => {
   const { products, loading } = useFetchProducts();
 
   return (
@@ -16,9 +16,8 @@ const Shop = () => {
           products.map((product) => (
             <ProductCard
               key={product.id}
-              title={product.title}
-              price={product.price}
-              image={product.image}
+              product={product}
+              addToCart={addToCart}
             />
           ))}
       </div>

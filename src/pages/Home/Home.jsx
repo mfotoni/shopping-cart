@@ -5,7 +5,7 @@ import ProductCard from "../../components/ProductCard";
 import useFetchProducts from "../../hooks/useFetchProducts";
 import { NavLink } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ addToCart }) => {
   const { products, loading } = useFetchProducts();
 
   return (
@@ -24,9 +24,8 @@ const Home = () => {
             .map((product) => (
               <ProductCard
                 key={product.id}
-                title={product.title}
-                price={product.price}
-                image={product.image}
+                product={product}
+                addToCart={addToCart}
               />
             ))}
       </div>
