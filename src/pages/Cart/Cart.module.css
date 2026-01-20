@@ -25,27 +25,27 @@
 }
 
 .total_price {
-  display: flex; /* Layout em linha */
-  justify-content: space-between; /* Espaça "Total" e o valor nas extremidades */
-  align-items: center; /* Centraliza verticalmente */
-  font-size: 1.5rem; /* Tamanho grande para destaque */
-  font-weight: bold; /* Texto em negrito */
-  margin-bottom: 2rem; /* Espaço antes do botão */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .checkout_btn {
-  width: 100%; /* Ocupa toda a largura do container */
-  padding: 1rem; /* Espaçamento interno generoso */
-  border: none; /* Remove borda padrão */
-  border-radius: 8px; /* Cantos levemente arredondados */
-  font-size: 1.1rem; /* Tamanho de fonte aumentado */
-  font-weight: bold; /* Texto em negrito */
-  cursor: pointer; /* Mostra cursor de clique */
-  transition: background 0.3s; /* Transição suave na mudança de cor */
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .checkout_btn:hover {
-  background: #ff5533;
+  background: orange;
 }
 
 .empty_cart {

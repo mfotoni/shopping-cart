@@ -19,7 +19,7 @@ function App() {
         return prevItems.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + quantity }
-            : item
+            : item,
         );
       } else {
         return [...prevItems, { ...product, quantity }];
@@ -30,7 +30,7 @@ function App() {
   const changeCartQuantity = (productId, newQuantity) => {
     setCartItems((prevItems) => {
       return prevItems.map((item) =>
-        item.id === productId ? { ...item, quantity: newQuantity } : item
+        item.id === productId ? { ...item, quantity: newQuantity } : item,
       );
     });
   };

@@ -1,11 +1,13 @@
 .card_container {
   display: flex;
   width: 100%;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .card_container img {
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
   object-fit: contain;
 }
 
