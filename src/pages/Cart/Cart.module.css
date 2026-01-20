@@ -1,0 +1,54 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 8rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cart_content {
+  flex: 1;
+}
+
+.cart_items {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+.cart_summary {
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+  border-radius: 12px;
+}
+
+.total_price {
+  display: flex; /* Layout em linha */
+  justify-content: space-between; /* Espaça "Total" e o valor nas extremidades */
+  align-items: center; /* Centraliza verticalmente */
+  font-size: 1.5rem; /* Tamanho grande para destaque */
+  font-weight: bold; /* Texto em negrito */
+  margin-bottom: 2rem; /* Espaço antes do botão */
+}
+
+.checkout_btn {
+  width: 100%; /* Ocupa toda a largura do container */
+  padding: 1rem; /* Espaçamento interno generoso */
+  border: none; /* Remove borda padrão */
+  border-radius: 8px; /* Cantos levemente arredondados */
+  font-size: 1.1rem; /* Tamanho de fonte aumentado */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Mostra cursor de clique */
+  transition: background 0.3s; /* Transição suave na mudança de cor */
+}
+
+.checkout_btn:hover {
+  background: #ff5533;
+}
+
+.empty_cart {
+  text-align: center;
+  padding: 4rem;
+}

@@ -27,6 +27,14 @@ function App() {
     });
   };
 
+  const changeCartQuantity = (productId, newQuantity) => {
+    setCartItems((prevItems) => {
+      return prevItems.map((item) =>
+        item.id === productId ? { ...item, quantity: newQuantity } : item
+      );
+    });
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -37,7 +45,12 @@ function App() {
             <Route path="/shop" element={<Shop addToCart={addToCart} />} />
             <Route
               path="/cart"
-              element={<Cart cartItems={(cartItems, addToCart)} />}
+              element={
+                <Cart
+                  cartItems={cartItems}
+                  changeCartQuantity={changeCartQuantity}
+                />
+              }
             />
           </Routes>
         </div>
